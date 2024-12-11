@@ -1,0 +1,36 @@
+---
+const skills = [
+  'تصميم المواقع',
+  'هوية بصرية',
+  'تجربة المستخدم',
+  'تصميم تفاعلي',
+  'Adobe Creative Suite',
+  'Figma'
+];
+---
+
+<section id="about" class="py-20 bg-primary/30">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold mb-6">من نحن</h2>
+        <p class="text-lg text-secondary/80 mb-8">
+          نحن استوديو تصميم إبداعي متخصص في تقديم حلول تصميم مبتكرة تساعد العلامات التجارية على التألق في العصر الرقمي. نؤمن بأن التصميم الجيد يجمع بين الجمال والوظيفة لخلق تجارب استثنائية.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          {
+            skills.map((skill) => (
+              <span class="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm">
+                {skill}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square bg-accent/20 rounded-lg relative z-10"></div>
+        <div class="absolute inset-0 translate-x-4 translate-y-4 bg-accent/10 rounded-lg"></div>
+      </div>
+    </div>
+  </div>
+</section>

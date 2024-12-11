@@ -1,0 +1,32 @@
+---
+const services = [
+  {
+    title: 'تصميم المواقع',
+    description: 'تصميم وتطوير مواقع عصرية تتناسب مع هويتك وتحقق أهدافك'
+  },
+  {
+    title: 'الهوية البصرية',
+    description: 'تصميم هوية بصرية متكاملة تعكس قيم علامتك التجارية'
+  },
+  {
+    title: 'تجربة المستخدم',
+    description: 'تصميم تجارب مستخدم سلسة وممتعة تحقق رضا عملائك'
+  }
+];
+---
+
+<section id="services" class="py-20 bg-primary">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-16">خدماتنا</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {
+        services.map((service) => (
+          <div class="p-8 border border-accent/20 rounded-lg hover:border-accent transition">
+            <h3 class="text-2xl font-bold mb-4 text-accent">{service.title}</h3>
+            <p class="text-secondary/80">{service.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
